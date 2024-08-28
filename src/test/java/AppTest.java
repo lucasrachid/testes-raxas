@@ -5,7 +5,7 @@ import org.junit.Test;
 import com.cashback.SimuladorCashBack;
 
 public class AppTest {
-     @Test
+    @Test
     public void testCashbackBronzeAte100() {
         double cashback = SimuladorCashBack.calculaCashBack(100, "Bronze");
         assertEquals(5.0, cashback, 0.01);
@@ -56,7 +56,7 @@ public class AppTest {
     @Test
     public void testCashbackOuroAcima500() {
         double cashback = SimuladorCashBack.calculaCashBack(600, "Ouro");
-        assertEquals(150.0, cashback, 0.01); 
+        assertEquals(150.0, cashback, 0.01);
     }
 
     @Test
@@ -68,7 +68,7 @@ public class AppTest {
     @Test
     public void testCashbackCompraNegativa() {
         double cashback = SimuladorCashBack.calculaCashBack(-50, "Bronze");
-        assertEquals(0.0, cashback, 0.01); 
+        assertEquals(0.0, cashback, 0.01);
         // Não deve aplicar cashback para valores negativos
         // Está aplicando erro e retornando -2.5 de cashback.
     }

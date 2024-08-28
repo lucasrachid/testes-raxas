@@ -1,10 +1,10 @@
 # COMANDOS MVN
 
-mvn clean
-mvn package
+mvn clean - Limpar dependências
+mvn package - Gerar arquivo Jar
+mvn test - Rodar os testes
 
 # COMANDO PARA RODAR O JAR
-
 java -jar target/analise-valor-limite-1.0-SNAPSHOT.jar
 
 
@@ -67,7 +67,7 @@ Valores Limite Inferior: Testados valores de compra R$0 e R$-50 para verificar o
 Os testes foram executados usando JUnit dentro do ambiente de desenvolvimento do projeto. Cada caso de teste foi executado individualmente para verificar o resultado do cálculo de cashback em diferentes cenários.
 
 ## b. Resultados dos Testes:
-Todos os testes passaram com sucesso, sem falhas. Os resultados dos testes confirmaram que a aplicação lida corretamente com os diferentes valores de entrada e calcula o cashback conforme esperado.
+Os testes passaram com sucesso, sem falhas com exceção do teste testCashbackCompraNegativa, onde o resultado esperado era um cashback de 0.0, mas retornou -2.5. 
 
 ## c. Saídas de Execução dos Testes:
 (Adicionar logs ou capturas de tela da execução dos testes aqui)
@@ -76,7 +76,7 @@ Todos os testes passaram com sucesso, sem falhas. Os resultados dos testes confi
 Os testes projetados para a análise de valor limite retornaram os resultados esperados. Não foram encontrados problemas ao testar os limites especificados.
 
 ## e. Problemas Encontrados:
-Nenhum problema foi identificado durante os testes de valores limite. A implementação atual do cálculo de cashback está funcionando corretamente nos limites testados.
+O Teste testCashbackCompraNegativa apresentou um problema no retorno, sendo que o esperado seria o valor de 0.0 de cashback, porém o mesmo está retornando -2.5 de cashback.
 
 # 4. Conclusão:
 ## a. Resumo das Descobertas:
